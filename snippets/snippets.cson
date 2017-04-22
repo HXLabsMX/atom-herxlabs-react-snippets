@@ -1,0 +1,38 @@
+'.source.js,source.jsx':
+  'initApp':
+    'prefix': 'init'
+    'body': """
+      import React, { Component } from 'react';
+      
+      class ${1} extends React.Component {
+        render() {
+            
+        }
+      }
+      React.render(
+        <${1} />,
+        document.getElementById('${2}')
+      );
+      $0      
+    """
+  'initComponent':
+    'prefix': 'initc'
+    'body': """
+      import React, { Component } from 'react';
+      
+      export default class ${1} extends React.Component {
+        render() {
+            
+        }
+      }$0
+    """
+    'Write css in js':
+    'prefix': 'css'
+    'body': """
+        const styles = StyleSheet.create({
+          ${1}: {
+            backgroundColor: 'lightgray',
+            }),
+          },
+        });$0
+    """
