@@ -3,36 +3,33 @@
     'prefix': 'init'
     'body': """
       import React, { Component } from 'react';
-      
+
       class ${1} extends React.Component {
-        render() {
-            
+        render(){
+          ${3}
         }
       }
-      React.render(
-        <${1} />,
-        document.getElementById('${2}')
-      );
-      $0      
+
+      React.render(<${1} />, document.getElementById('${2}'));
     """
   'initComponent':
     'prefix': 'initc'
     'body': """
       import React, { Component } from 'react';
-      
+
       export default class ${1} extends React.Component {
         render() {
-            
+          ${2}
         }
-      }$0
+      }
     """
-    'Write css in js':
+  'CSS':
     'prefix': 'css'
     'body': """
-        const styles = StyleSheet.create({
-          ${1}: {
-            backgroundColor: 'lightgray',
-            }),
-          },
-        });$0
+      const ${1:"styles"} = StyleSheet.create({
+        ${2:"myCSSClass"}: {
+          ${3:"backgroundColor: 'lightgrey'"}
+          }),
+        },
+      });
     """
