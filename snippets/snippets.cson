@@ -26,9 +26,9 @@
   'CSS':
     'prefix': 'css'
     'body': """
-      const ${1:"styles"} = StyleSheet.create({
-        ${2:"myCSSClass"}: {
-          ${3:"backgroundColor: 'lightgrey'"}
+      const ${1:styles} = StyleSheet.create({
+        ${2:myCSSClass}: {
+          ${3:backgroundColor: 'lightgrey',}
           }),
         },
       });
