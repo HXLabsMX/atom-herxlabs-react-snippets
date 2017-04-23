@@ -3,6 +3,7 @@
     'prefix': 'init'
     'body': """
       import React, { Component } from 'react';
+      import { render } from 'react-dom';
 
       class ${1} extends React.Component {
         render(){
@@ -10,7 +11,7 @@
         }
       }
 
-      React.render(<${1} />, document.getElementById('${2}'));
+      render(<${1} />, document.getElementById('${2}'));
     """
   'initComponent':
     'prefix': 'initc'
@@ -21,6 +22,14 @@
         render() {
           ${2}
         }
+      }
+    """
+  'contructor()':
+    'prefix': 'initc'
+    'body': """
+      contructor(){
+        super()
+        ${1}
       }
     """
   'CSS':
