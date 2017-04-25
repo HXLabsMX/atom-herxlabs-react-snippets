@@ -1,44 +1,131 @@
 '.source.js,source.jsx':
-  'initApp':
-    'prefix': 'init'
+# To Start
+  'App Base':
+    'prefix': 'xInit'
     'body': """
       import React, { Component } from 'react';
       import { render } from 'react-dom';
 
       class ${1} extends React.Component {
         render(){
-          ${3}
+          return (
+            ${3}
+          );
         }
       }
 
       render(<${1} />, document.getElementById('${2}'));
     """
-  'initComponent':
-    'prefix': 'initc'
+  'Component Base':
+    'prefix': 'XInitc'
     'body': """
       import React, { Component } from 'react';
 
       export default class ${1} extends React.Component {
         render() {
-          ${2}
+          return (
+            ${2}
+          );
         }
       }
     """
-  'contructor()':
-    'prefix': 'initc'
+# Lifecycle
+  'constructor()':
+    'prefix': 'constructor'
     'body': """
-      contructor(){
-        super()
+      contructor(props){
+        super(props);
+        this.state = {${1}}
+      }
+    """
+  'componentWillMount()':
+    'prefix': 'xCWM'
+    'body': """
+      componentWillMount() {
         ${1}
       }
     """
-  'CSS':
-    'prefix': 'css'
+  'componentDidMount()':
+    'prefix': 'xCDM'
     'body': """
-      const ${1:styles} = StyleSheet.create({
-        ${2:myCSSClass}: {
-          ${3:backgroundColor: 'lightgrey',}
+      componentWillMount() {
+        ${1}
+      }
+    """
+  'componentWillReceiveProps()':
+    'prefix': 'xCWRP'
+    'body': """
+      componentWillReceiveProps() {
+        ${1}
+      }
+    """
+  'shouldComponentUpdate()':
+    'prefix': 'xSCU'
+    'body': """
+      shouldComponentUpdate() {
+        ${1}
+      }
+    """
+  'componentWillUpdate()':
+    'prefix': 'xCWU'
+    'body': """
+      componentWillUpdate() {
+        ${1}
+      }
+    """
+  'componentDidUpdate()':
+    'prefix': 'xCDU'
+    'body': """
+      componentDidUpdate() {
+        ${1}
+      }
+    """
+  'componentWillUnMount()':
+    'prefix': 'xCWUM'
+    'body': """
+      componentWillUnMount() {
+        ${1}
+      }
+    """
+# State and props
+  'setState()':
+    'prefix': 'xsetState'
+    'body': """
+      this.setState((prevState, props) => ({
+        ${1}
+      }));
+    """
+  'state':
+    'prefix': 'xState'
+    'body': """
+      this.state.${1}
+    """
+  'props':
+    'prefix': 'xProps'
+    'body': """
+      this.props.${1}
+    """
+# Styles
+  'StyleSheet':
+    'prefix': 'xStyleSheet'
+    'body': """
+      const styles = StyleSheet.create({
+        ${1:myStyle}: {
+          ${2:flex: 1,}
           }),
         },
       });
+    """
+  'Style':
+    'prefix': 'xStyle'
+    'body': """
+      ${1:myStyle}: {
+        ${2:backgroundColor: 'lightgrey',}
+        }),
+      },
+    """
+  'Style':
+    'prefix': 'xStyleAsign'
+    'body': """
+      style={styles.${1:myStyle}}
     """
