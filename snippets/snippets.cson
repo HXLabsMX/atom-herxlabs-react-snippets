@@ -6,7 +6,7 @@
       import React, { Component } from 'react';
       import { render } from 'react-dom';
 
-      class ${1} extends React.Component {
+      class ${1} extends Component {
         render(){
           return (
             ${3}
@@ -21,7 +21,7 @@
     'body': """
       import React, { Component } from 'react';
 
-      export default class ${1} extends React.Component {
+      export default class ${1} extends Component {
         render() {
           return (
             ${2}
@@ -99,6 +99,13 @@
     'prefix': 'xState'
     'body': """
       this.state.${1}
+    """
+  'props':
+    'prefix': 'xdefaultProps'
+    'body': """
+      ${1:myComponent}.defaultProps = {
+        ${2:color: 'blue'}
+      };
     """
   'props':
     'prefix': 'xProps'
