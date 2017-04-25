@@ -131,8 +131,22 @@
         }),
       },
     """
-  'Style':
+  'StyleAsign':
     'prefix': 'xStyleAsign'
     'body': """
       style={styles.${1:myStyle}}
+    """
+# Misc
+  'Firebase':
+    'prefix': 'xFirebase'
+    'body': """
+      import firebase from 'firebase'
+
+      firebase.initializeApp({
+        apiKey: '',
+        authDomain: '',
+        databaseURL: '',
+        storageBucket: ''
+      })
+      });
     """

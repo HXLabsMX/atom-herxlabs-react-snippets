@@ -37,6 +37,7 @@ Or search for `atom-herxlabs-react-snippets` in Atom settings view.  <br />
 | :-------- | :------------ |
 | *xsetState*   | Create a setState() arrow function |
 | *xState*   | this.state. |
+| *xdefaultProps*   | To set default props to a  component |
 | *xProps*   | this.props. |
 
 ### Styles
@@ -46,6 +47,10 @@ Or search for `atom-herxlabs-react-snippets` in Atom settings view.  <br />
 | *xStyle*   | Create an Style |
 | *xStyleAsign*   | Asign an Style |
 
+### Misc
+| Prefix    | Snippet       |
+| :-------- | :------------ |
+| *xFirebase*   | Create Firebase imports and config |
 
 ## License
 This work is licensed under the [The MIT License](https://raw.githubusercontent.com/HerXLabs/atom-herxlabs-react-snippets/master/LICENSE).
