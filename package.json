@@ -1,6 +1,6 @@
 {
   "name": "atom-herxlabs-react-snippets",
-  "version": "0.3.0",
+  "version": "0.3.1",
   "description": "A useful collection of React snippets in ES6 for Atom",
   "main": "index.js",
   "engines": {
