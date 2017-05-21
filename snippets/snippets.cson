@@ -3,14 +3,14 @@
   'App Base':
     'prefix': 'xInit'
     'body': """
-      import React, { Component } from 'react';
-      import { render } from 'react-dom';
+      import React, { Component } from 'react'
+      import { render } from 'react-dom'
 
       class ${1} extends Component {
         render(){
           return (
             ${3}
-          );
+          )
         }
       }
 
@@ -19,13 +19,13 @@
   'Component Base':
     'prefix': 'XInitc'
     'body': """
-      import React, { Component } from 'react';
+      import React, { Component } from 'react'
 
       export default class ${1} extends Component {
         render() {
           return (
             ${2}
-          );
+          )
         }
       }
     """
@@ -34,7 +34,7 @@
     'prefix': 'constructor'
     'body': """
       contructor(props){
-        super(props);
+        super(props)
         this.state = {${1}}
       }
     """
@@ -93,7 +93,7 @@
     'body': """
       this.setState((prevState, props) => ({
         ${1}
-      }));
+      }))
     """
   'state':
     'prefix': 'xState'
@@ -105,7 +105,7 @@
     'body': """
       ${1:myComponent}.defaultProps = {
         ${2:color: 'blue'}
-      };
+      }
     """
   'props':
     'prefix': 'xProps'
@@ -121,7 +121,7 @@
           ${2:flex: 1,}
           }),
         },
-      });
+      })
     """
   'Style':
     'prefix': 'xStyle'
@@ -148,5 +148,4 @@
         databaseURL: '',
         storageBucket: ''
       })
-      });
     """
